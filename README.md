@@ -1,9 +1,26 @@
 # TFM_UNIR
 Material complementario relacionado con el Trabajo Final de Máster.
-Pasos previos a la ejecución del script de detección de casos de suplantación de marca:
-1. Introducir API keys de las herramientas OSINT en la cmd: $env:HERRAMIENTAOSINT_API_KEY="apikey"
-   - HERRAMIENTAOSINT -> VIRUSTOTAL, ABUSEIPDB y APIVOID.
-   - apikey -> apikey personal del usuario.
-2. Ejecutar el script.
-3. Introducir dominio potencialmente sospechoso.
-4. Introducir dominio legítimo.
+
+## Requisitos
+
+Antes de ejecutar el script, es necesario disponer de claves API para las siguientes herramientas OSINT:
+
+- VirusTotal
+- AbuseIPDB
+- APIVoid
+
+## Configuración
+
+Configurar las variables de entorno en PowerShell:
+
+```powershell
+$env:VIRUSTOTAL_API_KEY="tu_api_key"
+$env:ABUSEIPDB_API_KEY="tu_api_key"
+$env:APIVOID_API_KEY="tu_api_key"
+```
+
+## Ejecución
+
+1. Ejecutar el script.
+2. Introducir el dominio potencialmente sospechoso.
+3. Introducir el dominio legítimo para realizar la comparación.
